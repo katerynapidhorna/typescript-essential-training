@@ -17,3 +17,9 @@ function totalLength(x, y) {
     }
     return total;
 }
+//type inference
+function calculateAge(birthYear) {
+    //TS knows that the type of returned value is the number
+    //knowing about return type would allow TS to make better inferences about the code that caused this function
+    return Date.now() - birthYear;
+}
