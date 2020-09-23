@@ -34,3 +34,4 @@ function calculateAge(birthYear) {
     //knowing about return type would allow TS to make better inferences about the code that caused this function
     return Date.now() - birthYear;
 }
+let todo = { name: "clean the house" };

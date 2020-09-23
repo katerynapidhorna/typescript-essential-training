@@ -49,3 +49,19 @@ function calculateAge(birthYear) {
   //knowing about return type would allow TS to make better inferences about the code that caused this function
   return Date.now() - birthYear;
 }
+
+//CUSTOM TYPE
+interface Todo {
+  //interfaces strictly used for compile checks only
+  name: string;
+  completed?: boolean; // question mark  makes the property optional
+}
+
+let todo: Todo = { name: "clean the house" };
+
+interface ITodoService {
+  getById(todoId: number): Todo;
+  getAll(): Todo[];
+  delete(todoId: number): void; // method does not return anything so we use void as the return type
+  add(todo: Todo): Todo;
+}
