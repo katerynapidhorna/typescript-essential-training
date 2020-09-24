@@ -49,3 +49,18 @@ const toDo = {
     name: "Buy milk",
     state: TodoState.New,
 };
+class Animal {
+    constructor(state) {
+        this.state = state;
+    }
+    add(animal) {
+        let newId = Animal.getNextId();
+    }
+    walk() {
+        return this.state;
+    }
+    static getNextId() {
+        return (Animal.lastId += 1);
+    }
+}
+Animal.lastId = 0;

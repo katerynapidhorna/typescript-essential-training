@@ -90,3 +90,27 @@ const toDo: Todo = {
   name: "Buy milk",
   state: TodoState.New,
 };
+
+//classes and static methods
+
+interface Animal {
+  name: string;
+}
+
+class Animal {
+  static lastId: number = 0;
+
+  constructor(private state: boolean) {}
+
+  add(animal: Animal) {
+    let newId = Animal.getNextId();
+  }
+
+  walk() {
+    return this.state;
+  }
+
+  static getNextId() {
+    return (Animal.lastId += 1);
+  }
+}
