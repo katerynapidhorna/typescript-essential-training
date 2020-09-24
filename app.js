@@ -37,3 +37,15 @@ function calculateAge(birthYear) {
 let todo = { name: "clean the house" };
 const $ = function (selector) { }; //<jQuery> casting syntax to force TS to treat this function as an instance of jQuery interface
 const element = $("div");
+//enums
+var TodoState;
+(function (TodoState) {
+    TodoState[TodoState["New"] = 1] = "New";
+    TodoState[TodoState["Active"] = 2] = "Active";
+    TodoState[TodoState["Complete"] = 3] = "Complete";
+    TodoState[TodoState["Deleted"] = 4] = "Deleted";
+})(TodoState || (TodoState = {}));
+const toDo = {
+    name: "Buy milk",
+    state: TodoState.New,
+};

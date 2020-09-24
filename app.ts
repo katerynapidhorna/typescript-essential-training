@@ -54,7 +54,7 @@ function calculateAge(birthYear) {
 interface Todo {
   //interfaces strictly used for compile checks only
   name: string;
-  completed?: boolean; // question mark  makes the property optional
+  state?: any; // question mark  makes the property optional
 }
 
 let todo: Todo = { name: "clean the house" };
@@ -76,3 +76,17 @@ interface jQuery {
 const $ = <jQuery>function (selector) {}; //<jQuery> casting syntax to force TS to treat this function as an instance of jQuery interface
 
 const element = $("div");
+
+//enums
+
+enum TodoState {
+  New = 1,
+  Active,
+  Complete,
+  Deleted,
+}
+
+const toDo: Todo = {
+  name: "Buy milk",
+  state: TodoState.New,
+};
