@@ -35,3 +35,5 @@ function calculateAge(birthYear) {
     return Date.now() - birthYear;
 }
 let todo = { name: "clean the house" };
+const $ = function (selector) { }; //<jQuery> casting syntax to force TS to treat this function as an instance of jQuery interface
+const element = $("div");

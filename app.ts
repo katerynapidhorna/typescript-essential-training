@@ -65,3 +65,14 @@ interface ITodoService {
   delete(todoId: number): void; // method does not return anything so we use void as the return type
   add(todo: Todo): Todo;
 }
+
+//using interfaces to describe functions
+
+interface jQuery {
+  (selector: string): HTMLElement; //<= HTMLElement built in type
+  version: number;
+}
+
+const $ = <jQuery>function (selector) {}; //<jQuery> casting syntax to force TS to treat this function as an instance of jQuery interface
+
+const element = $("div");
