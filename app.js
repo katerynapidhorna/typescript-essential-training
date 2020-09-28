@@ -59,8 +59,20 @@ class Animal {
     walk() {
         return this.state;
     }
+    get animalState() {
+        return this.state;
+    }
+    set animalState(newState) {
+        this.state = newState;
+    }
     static getNextId() {
         return (Animal.lastId += 1);
     }
 }
 Animal.lastId = 0;
+const animal = new Animal(true);
+console.log(animal.animalState);
+//you can assign null or undefined to variable of type string or boolean
+let title = undefined; //or null
+let isNew = null; //or undefined
+export {};

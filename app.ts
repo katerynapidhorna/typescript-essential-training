@@ -1,3 +1,5 @@
+export {};
+
 let sayHi: string = "Hello World";
 let myName: string = "Kate";
 
@@ -110,7 +112,22 @@ class Animal {
     return this.state;
   }
 
+  get animalState() {
+    return this.state;
+  }
+
+  set animalState(newState) {
+    this.state = newState;
+  }
+
   static getNextId() {
     return (Animal.lastId += 1);
   }
 }
+
+const animal = new Animal(true);
+console.log(animal.animalState);
+
+//you can assign null or undefined to variable of type string or boolean
+let title: string = undefined; //or null
+let isNew: boolean = null; //or undefined
